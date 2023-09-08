@@ -1,0 +1,80 @@
+.profile{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: right;
+    top: 20px;
+    right: 0;
+    padding: 15px;
+}
+
+.profile .btn-foto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.btn-foto input[type=button]{
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    background-color: #5a8013;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.profile .profile-img{
+    border-radius: 100%;
+    background-color: #5a8013;
+    width: 220px;
+    
+}
+
+.profile .personal b{
+    color: #5a8013;
+}
+
+.profile .personal p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.informations{
+    height: 100vh;
+    margin-right: 210px;
+}
+
+.informations .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.informations .content .head{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.informations .content .head h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #5a8013;
+    margin: 20px 0 -2px 0;
+}
+
+.informations .content .head small{
+    font-weight: 500;
+}
+
+.informations .content .contentInfo{
+    margin: 20px 0;
+}
+

@@ -1,0 +1,39 @@
+
+.sidebar{
+    background-color: #5a8013;
+    box-shadow: 5px 5px 5px 5px #0000001f;
+}
+
+.barra{
+    background-color: #24300c;
+}
+
+.imgContainer{
+    background-color: #fff;
+}
+
+.sidebar .logo a{
+    color: black;
+}
+
+.sidebar .logo span{
+    color: #fff;
+}
+
+
+.sidebar .btnBox i{
+    color: #fff; 
+}
+
+.sidebar .btnBox a{
+    color: rgb(255, 255, 255);
+}
+
+.sidebar .btnBox:hover,
+.sidebar .ative{
+    background-color: #24300c;
+}
+
+.sidebar .btnBox:hover > i{
+    color: #5a8013;
+}
