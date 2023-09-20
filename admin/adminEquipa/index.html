@@ -1,58 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-bt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/sidebar.style.css">
+    <link rel="stylesheet" href="../../css/style.adminfo.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap-icons-1.9.1/bootstrap-icons.css">
     <title>Inicio | ADequipa</title>
 </head>
+
 <body>
     <div class="containerGeral">
-        <div class="sidebar">
-            <div class="logo">
-                <div class="imgContainer">
-                  <img src="../images/logos/logoSemFundoN.png" alt="">  
-                </div>
-                <!-- <h1 class="text-light"><a href="./index.html"><b>No<span class="logoSpan">Play</span></b></a></h1> -->
-            </div>
-            <div class="menu">
-                <div class="btnBox ative">
-                    <i class="bi bi-house"></i>
-                    <a href="./index.html">Inicio</a>
-                </div>
-                <div class="btnBox">
-                    <i class="bi bi-alarm"></i>
-                    <a href="./pages/memo.html">Agendados</a>
-                </div>
-                <div class="btnBox">
-                    <i class="bi bi-person"></i>
-                    <a href="./pages/account.html">Conta</a>
-                </div>
-            </div>
-            <div class="sair">
-                <div class="btnBox">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <a href="../index.html">Sair</a>
-                </div>
-            </div>
-            <div class="barra"></div>
+        <div class="navbar">
+            <h1 class="text-light"><a href="index.html"><b>No<span class="logoSpan">Play</span></b></a></h1>
+            <i class="bi bi-person-fill"></i>
         </div>
-            <div class="container">
-            <div class="content">
-                <h1>Seja Bem vindo ao <b>No<span style="color: #5a8013;">Play</span></h1>
-                <p>Encontre os jogos de seu time, use nosso sistema com sabedoria e seja feliz.</p>
-                <div class="btnfield">
-                    <a href="#">Perguntas frequentes</a>
-                    <a href="#">Publicações recentes</a>
+        <nav class="main-menu">
+            <ul class="logo">
+                <li class="lilo">
+                    <a href="/">
+                        <img src="../../images/logos/logoSemFundoN.png" alt="">
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="item-side">
+                <li>
+                    <a href="./index.html" class="on">
+                        <i class="bi bi-house-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Página Inicial
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="./pages/registerTeam.html">
+                        <i class="bi bi-bookmark-plus-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Cadastro de Equipa
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="./pages/disponibility.html">
+                        <i class="bi bi-calendar-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Disponibilidade
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="./pages/memo.html">
+                        <i class="bi bi-alarm-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Jogos Agendados
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="./pages/solicitations.html">
+                        <i class="bi bi-person-plus-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Solicitações
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="./pages/ADEaccount.html">
+                        <i class="bi bi-person-fill bi-2x"></i>
+                        <span class="nav-text">
+                            Minha Conta
+                        </span>
+                    </a>
+
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="/">
+                        <i class="bi bi-box-arrow-right fa-2x"></i>
+                        <span class="nav-text">
+                            Terminar sessão
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="info-cards">
+                <div class="card" style="background-color: #f6a9234e">
+                    <div class="icon" style="background-color: #f6a92382">
+                        <i class="bi bi-people-fill" style="color:#f6a723;"></i>
+                    </div>
+                    <div class="informations">
+                        <h3>Equipes Cadastradas</h3>
+                        <p>15</p>
+                    </div>
+                    <small style="color: #01a43d;">+20%</small>
+                </div>
+                <div class="card" style="background-color: #24d1634f">
+                    <div class="icon" style="background-color: #24d1638a">
+                        <i class="bi bi-view-stacked" style="color:#24d164;"></i>
+                    </div>
+
+                    <div class="informations">
+                        <h3>Estadios Disponiveis</h3>
+                        <p>04</p>
+                    </div>
+                    <small style="color: rgb(225, 0, 0);">-50%</small>
+                </div>
+                <div class="card" style="background-color: #ed4f9e50">
+                    <div class="icon" style="background-color: #ed4f9e8f">
+                        <i class="bi bi-view-list" style="color:#ed4f9d;"></i>
+                    </div>
+                    <div class="informations">
+                        <h3>Estadios Cadastrados</h3>
+                        <p>08</p>
+                    </div>
+                    <small style="color: rgb(225, 0, 0);">-13%</small>
+                </div>
+                <div class="card" style="background-color: #2564eb50">
+                    <div class="icon" style="background-color: #2564eb7b">
+                        <i class="bi bi-shield-plus" style="color:#2563eb;"></i>
+                    </div>
+                    <div class="informations">
+                        <h3>Vagas Disponiveis</h3>
+                        <p>15</p>
+                    </div>
+                    <small style="color: #01a43d;">+39%</small>
                 </div>
             </div>
-            <div class="contentImg">
-                <div class="imageContainer">
-                    <img src="../../images/portatil.png" alt="">
-                    <video class="vid"  autoplay muted loop src="../video/fundo.mp4"></video>
+
+            <div class="info-stadium">
+                <div class="content-info">
+                    <div class="info">
+                        <i class="bi bi-journal-plus i"></i>
+                        <div class="text">
+                            <h3>Que tal aumentarmos os números?</h3>
+                            <p>Mais algum Time disponivel? cadastre agora em nosso sistema.</p>
+                        </div>
+
+                        <div class="btn">
+                            <a href="./pages/registerTeam.html">
+                                <i class="bi bi-arrow-right"></i>
+                                <p>Cadastrar agora </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content-progress">
+                    <div class="progress">
+                        <span class="title timer">48</span>
+                        <div class="overlay"></div>
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="progress">
+                        <span class="title timer">70</span>
+                        <div class="overlay"></div>
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="title timer">85</span>
+                        <div class="overlay"></div>
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-table">
+                <h2>Equipes Cadastradas</h2>
+                <div class="table-scroll">
+                    <table class="table" border="1" cellspacing="0" rules="none">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome da Equipa</th>
+                                <th>Jogadores</th>
+                                <th>Taxa de Vitória</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    853093
+                                </td>
+                                <td>
+                                    FC Tony
+                                </td>
+                                <td>
+                                    15
+                                </td>
+                                <td style="color: #01a43d;">
+                                    80%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853352
+                                </td>
+                                <td>
+                                    FC Námbua
+                                </td>
+                                <td>
+                                    20
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    28%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853414
+                                </td>
+                                <td>
+                                    FC Trem
+                                </td>
+                                <td>
+                                    17
+                                </td>
+                                <td style="color: #01a43d;">
+                                    65%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853257
+                                </td>
+                                <td>
+                                    FC Freio
+                                </td>
+                                <td>
+                                    20
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    39.9%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853864
+                                </td>
+                                <td>
+                                    FC Zezé
+                                </td>
+                                <td>
+                                    23
+                                </td>
+                                <td style="color: #01a43d;">
+                                    70%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853097
+                                </td>
+                                <td>
+                                    FC Zizas
+                                </td>
+                                <td>
+                                    20
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    13.09%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853555
+                                </td>
+                                <td>
+                                    FC Zona
+                                </td>
+                                <td>
+                                    25
+                                </td>
+                                <td style="color: #01a43d;">
+                                    51%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853100
+                                </td>
+                                <td>
+                                    FC MD
+                                </td>
+                                <td>
+                                    12
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    49.5%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853411
+                                </td>
+                                <td>
+                                    FC KK
+                                </td>
+                                <td>
+                                    15
+                                </td>
+                                <td style="color: #01a43d;">
+                                    90%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    85311
+                                </td>
+                                <td>
+                                    FC Pula
+                                </td>
+                                <td>
+                                    16
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    19.99%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853620
+                                </td>
+                                <td>
+                                    FC Uíge
+                                </td>
+                                <td>
+                                    30
+                                </td>
+                                <td style="color: #01a43d;">
+                                    85%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853310
+                                </td>
+                                <td>
+                                    FC Bengo
+                                </td>
+                                <td>
+                                    16
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    46.09%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    853999
+                                </td>
+                                <td>
+                                    FC Tula
+                                </td>
+                                <td>
+                                    20
+                                </td>
+                                <td style="color: #01a43d;">
+                                    55%
+                                </td>
+                            </tr>
+
+                            <tr class="t2">
+                                <td>
+                                    853099
+                                </td>
+                                <td>
+                                    FC Andó
+                                </td>
+                                <td>
+                                    18
+                                </td>
+                                <td style="color: rgb(225, 0, 0);">
+                                    39.90%
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    8538193
+                                </td>
+                                <td>
+                                    FC América
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td style="color: #01a43d;">
+                                    50.5%
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

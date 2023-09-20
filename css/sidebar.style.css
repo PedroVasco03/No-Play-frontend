@@ -1,128 +1,255 @@
 @import url(../css/scroll.css);
-
+@import url('../../css/style.fonts.css');
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none !important;
 }
-
 .containerGeral{
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
 }
 
-.sidebar{
+.navbar{
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 200px;
-}
-
-.barra{
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 3px;
-}
-
-.sidebar .logo{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
     top: 0;
     left: 0;
     right: 0;
-    height: 200px;
-    padding: 35px;
-}
-
-.imgContainer{
-    position: relative;
     width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    margin-top: -20px;
-}
-
-.sidebar .logo .imgContainer img{
-    width: 100%;
-    height: 100%;
-    scale: 1.4;
-    margin-top: 10px;
-}
-
-.sidebar .logo a{
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-
-.sidebar .menu{
-    position: absolute;
+    height: 50px;
+    background-color: #212121;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     align-items: center;
+    text-align: center;
+    z-index: 1001;
 }
 
-.sidebar .sair{
+.navbar i{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20pt;
+    transition: all .3s ease-in-out;
+}
+
+.navbar i:hover{
+    color: #7ea436;
+}
+
+.navbar h1 {
+    position: absolute;
+    font-size: 28px;
+    margin: 0;
+    line-height: 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+    
+.navbar h1 a,
+.navbar h1 a:hover {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .logoSpan{
+      color: #94c045;
+  }
+
+nav{
+    position: fixed;
+}
+
+.bi-2x {
+font-size: 2em;
+}
+.bi {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:22px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:fixed;
+top:50px;
+bottom:0;
+height:calc(100% - 50px);
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+transition: all .5s ease-in-out;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+padding: 5px 0;
+transition: all .5s ease-in-out;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+font-family: arial;
+font-size: 16px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu>ul.logo {
+     position:absolute;
+    top: ;
+    left:0;
+    width: 60px;
+    border-radius: 50%;
+    
+}
+
+.main-menu:hover >ul.logo {
+    position:absolute;
+    top: 0;
+    left:0;
     right: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.main-menu>ul.logo img{
+ width: 60px;
+ transition: all .5s ease-in-out;
+}
+
+.main-menu:hover>ul.logo{
+    top: -60px;
+}
+
+.main-menu:hover>ul.logo img{
+    width: 100%;
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:absolute;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+margin-left: -300px;
+transition: all .4s linear;
+font-family: 'Titillium Web', sans-serif;
+}
+
+.item-side{
     display: flex;
+    flex-direction: column;
+    height: 100%;
     justify-content: center;
 }
 
-.sidebar .btnBox{
-    position: relative;
-    width: 100%;
-    margin: 5px 0;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    transition: .3s ease-in-out;
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
 }
 
-.sidebar .btnBox i{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-   transition: .3s ease-in-out; 
+.logout .nav-text{
+    margin-left: -300px;
+    transition: all .4s linear;
 }
 
-.sidebar .btnBox a{
-    width: 100%;
-    height: 100%;
-    padding: 12px 20px;
-    font-weight: 600;
+.main-menu:hover > .item-side .nav-text, .logout .nav-text{
+    margin-left: 0;
+}
+.no-touch .scrollable.hover {
+overflow-y:hidden;
 }
 
-.sidebar .btnBox:hover,
-.sidebar .ative{
-    margin-left: 20px;
-    width: 90%;
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
 }
 
-.sidebar .btnBox:hover > i{
-    scale: 1.1;
+a:hover,a:focus {
+text-decoration:none;
 }
 
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover:not(.lilo)>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a{
+color:#fff;
+background-color:#94c045;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
 .containerGeral .container{
-    margin-left: 200px;
+    margin-top: 50px;
+margin-left: 60px;
+    width: calc(100% - 60px);
+    
 }
+
+.on{
+    background-color: #7ea436;
+    width: 24%;
+}
+
+.on i, .on .nav-text{ color: #fff;}

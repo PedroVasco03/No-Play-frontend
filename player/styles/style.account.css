@@ -1,12 +1,16 @@
-.profile{
-    position: fixed;
+.info{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+}
+.profile{
+    display: flex;
+    width: 250px;
+    justify-content: center;
     flex-direction: column;
-    float: right;
-    top: 20px;
-    right: 0;
     padding: 15px;
+    margin-top: -180px;
 }
 
 .profile .btn-foto{
@@ -34,16 +38,18 @@
     border-radius: 100%;
     background-color: #5a8013;
     width: 220px;
-    
 }
-
-.profile .personal b{
-    color: #5a8013;
+.informations{
+    width: 100%;
 }
-
-.profile .personal p{
-    font-size: 1rem;
-    font-weight: 400;
+.content{
+    display: flex;
+    justify-content: center;
+}
+.section-configuration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .informations{
@@ -51,30 +57,112 @@
     margin-right: 210px;
 }
 
-.informations .content{
+section .head{
     display: flex;
-    justify-content: center;
+    text-align: left;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.informations .content .head{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-}
-
-.informations .content .head h1{
+.head h1{
     font-size: 2.5rem;
     font-weight: 600;
     color: #5a8013;
-    margin: 20px 0 -2px 0;
+    margin: 20px;
+    text-align: right;
 }
 
-.informations .content .head small{
+.head small{
     font-weight: 500;
+    text-align: right;
+    margin: -20px 20px;
 }
 
-.informations .content .contentInfo{
-    margin: 20px 0;
+.container-body{
+    padding: 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    justify-content: center;
+    box-shadow: 8px 8px 3px 3px #9c9c9c38;
+}
+.label{
+    font-size: .8rem;
+    color: rgb(112, 112, 112);
+}
+.text{
+    margin: 15px 0;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #5a8013;
+    color: rgb(116, 116, 116);
+    background-color: transparent;
+}
+.container-buttons{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    
 }
 
+.container-buttons button{
+    cursor: pointer;
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+.container-configuration{
+    display: flex;
+    flex-direction: column ;
+}
+.container-configure{
+    cursor: pointer;
+    border-radius: 10px;    
+    padding: 10px;
+}
+.container-configure:hover{
+    background-color: rgb(246, 245, 245);
+    color: white;
+}
+.text{
+    font-size: .8rem;
+}
+.text-danger{
+    color: rgb(251, 84, 84);
+}
+.text-info{
+    color: rgb(111, 111, 111);
+}
+
+@media (max-width:920px){
+    .container-body{
+        width: 300px;
+    }
+}
+
+@media (max-width:830px){
+    .info{
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .profile{
+        margin-top: 0;
+    }
+}
+
+@media (max-width:380px){
+    .container-body{
+        width: 250px;
+    }
+}

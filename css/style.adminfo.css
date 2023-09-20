@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: all .5s ease-in;
+}
+
+.info-cards {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.info-cards .card {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 3px 3px #9c9c9c38;
+}
+
+.info-cards .card .icon {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: -20px;
+    margin-top: 30px;
+    filter: brightness(.8);
+    transition: all .5s ease-in-out;
+
+}
+
+.info-cards .card i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.info-cards .card:hover>.icon,
+.icon i {
+    scale: 1.2;
+    filter: brightness(1);
+}
+
+.info-cards .card small {
+    position: absolute;
+    font-weight: 600;
+    right: 20%;
+    bottom: 40px;
+    font-size: 1rem;
+}
+
+.info-cards .card h3 {
+    font-size: 1.2rem;
+    color: #858585;
+}
+
+.info-cards .card p {
+    color: #000;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+@media (max-width:1150px) {
+    .info-cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:380px) {
+    .info-cards .card {
+        width: 250px;
+    }
+
+    .info-cards .card .icon {
+        margin-left: 10px;
+    }
+
+    .info-cards .card small {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+/* cadastro */
+.info-stadium {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.content-progress {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    background-color: #212121;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 20px;
+    box-shadow: 10px 10px 5px 5px #9c9c9c38;
+}
+
+.progress {
+    width: 130px;
+    height: 130px;
+    font-size: 24px;
+    color: #24d164;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: #013095;
+    text-align: center;
+    line-height: 130px;
+    margin: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgb(174, 174, 174);
+}
+
+.progress::after {
+    content: "%";
+}
+
+.progress .title {
+    position: relative;
+    z-index: 100;
+}
+
+.progress .overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #003099;
+}
+
+.progress .left,
+.progress .right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 10px solid #ed4f9d;
+    border-radius: 100px 0px 0px 100px;
+    border-right: 0;
+    transform-origin: right;
+}
+
+.progress .left {
+    animation: load1 1s linear forwards;
+}
+
+.progress:nth-of-type(2) .right,
+.progress:nth-of-type(3) .right {
+    animation: load2 0.8s linear forwards 1s;
+}
+
+.progress:last-of-type .right {
+    animation: load3 0.9s linear forwards 1s;
+}
+
+@keyframes load1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes load2 {
+    0% {
+        z-index: 100;
+        transform: rotate(180deg);
+    }
+
+    50% {
+        z-index: 100;
+        transform: rotate(200deg);
+    }
+
+    100% {
+        z-index: 100;
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes load3 {
+    0% {
+        z-index: 100;
+        transform: rotate(180deg);
+    }
+
+    50% {
+        z-index: 100;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        z-index: 100;
+        transform: rotate(315deg);
+    }
+}
+
+
+.content-info {
+    position: relative;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    margin: 20px 40px;
+    padding: 80px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(174, 174, 174);
+}
+
+.content-info .i {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 30pt;
+    color: #003099;
+}
+
+.content-info .text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003099;
+    margin-bottom: 10px;
+}
+
+.content-info .text p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #858585;
+}
+
+.content-info .btn {
+    position: absolute;
+    display: flex;
+    right: 30px;
+    bottom: 10px;
+    align-items: center;
+}
+
+.content-info .btn a {
+    position: relative;
+    background-color: #003099;
+    padding: 18px 40px;
+    color: #fff;
+    border-radius: 5px
+}
+
+.content-info .btn i {
+    position: absolute;
+    right: -10px;
+    top: 13px;
+    align-items: center;
+    transition: all .5s ease-out;
+}
+
+.content-info .btn a:hover>i {
+    color: #24d164;
+    scale: 1.3;
+    right: -30px;
+}
+
+
+@media(max-width:580px) {
+    .info-stadium {
+        flex-wrap: wrap;
+    }
+
+    .content-info {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .content-progress {
+        margin: 20px 0;
+        width: 90%;
+    }
+}
+
+/* tabela estadios cadastrados */
+.container-table{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.container-table .table-scroll .table{
+    overflow: auto;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px rgb(195, 194, 194);
+}
+
+.container-table .table-scroll .table thead{
+    background-color: #7ea436;
+    color: #fff;
+    width: 100%;
+    border: none;
+}
+
+.container-table .table-scroll .table thead tr th{
+    padding: 15px;
+}
+
+.container-table .table-scroll .table tbody{
+    background-color: #212121;
+}
+
+.container-table .table-scroll .table tbody tr td{
+    padding: 10px;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.container-table .table-scroll .table tbody .t2{
+    background-color: #7ea436;
+}
+
+.disponibility a{
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.disponibility .disponivel{
+    background-color: #01a43d;
+}
+
+.disponibility .indisponivel{
+    background-color: rgb(225, 0, 0);
+}
+.disponibility .manutention{
+    background-color: #f6a723;
+}
+@media (max-width:1160px){
+    .table-scroll{
+        overflow-x: scroll;
+    }
+}
+
+/* Marcation */
+
+.agenda{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.agenda h2{
+    font-size: 2rem;
+    margin: 20px;
+    color: #7ea436;
+    text-align: right;
+
+    text-transform: uppercase;
+}
+
+.agenda .barra{
+    background-color: #7ea436;
+    width: 100%;
+    height: 2px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.agenda .segunda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.agenda .sexta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.agenda .sabado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.agenda .domingo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.agenda .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px 10px;
+    margin: 20px;
+    box-shadow: 8px 8px 3px 3px #9c9c9c38;
+}
+
+.card .times{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card .times i{
+    color: #7ea436;
+    font-size: 50pt;
+}
+
+.card .times p{
+    font-size: 1.3rem;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+.card .estadio small{
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+}
+
+.card .hora{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
+
+.estadio img{
+    width: 220px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    filter: brightness(.7);
+    box-shadow: 0px 0px 5px rgb(195, 194, 194);
+    transition: all .5s ease-in;
+}
+
+.card:hover > .estadio img{
+    filter: brightness(1);
+    scale: 1.1;
+}
+
+@media(max-width:400px){
+    .agenda .card{
+        width: 250px;
+    }
+}
+
+/* FORMILARIO */
+.title h2{
+    color: #7ea436;
+    font-size: 2rem;
+    margin: 20px;
+    text-align: right;
+}
+
+.form-cadastro{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-cadastro form{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    background-color: #212121;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 3px 3px #9c9c9c38;
+    margin: 20px 0;
+}
+
+.form-cadastro label{
+    display: flex;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.form-cadastro form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #7ea436;
+    margin: 10px;
+    height: 30px;
+    padding: 5px;
+    color: #fff;
+}
+
+.form-cadastro form a{
+    background-color: #7ea436;
+    color: #fff;
+    padding: 15px 18px
+}
+
+@media(max-width:610px){
+    .form-cadastro form{
+        width: 300px;
+    }
+}
+
+@media(max-width:375px){
+    .form-cadastro form{
+        width: 250px;
+    }
+}
+
+.btn-modal a{
+    padding: 12px 15px;
+    background-color: #7ea436;
+    border-radius: 5px;
+    color: #fff;
+}

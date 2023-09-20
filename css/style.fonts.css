@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Fira-Sans';
+    src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-Sans';
+    src: url(../fonts/Nunito_Sans/static/NunitoSans_10pt-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source-Sans3';
+    src: url(../fonts/Source_Sans_3/static/SourceSans3-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url(../fonts/Open_Sans/static/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
+    font-family: 'Nunito-Sans' !important;
+}
+
+p{
+    font-family: 'Fira-Sans' !important;
+}
+
+.form-control, .btn_enviar{
+    font-family: 'Open-Sans' !important;
+}
+
+a, span{
+    font-family: 'Source-Sans3' !important;
+}

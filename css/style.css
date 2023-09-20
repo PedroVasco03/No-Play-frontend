@@ -1,5 +1,5 @@
 @import url(../css/scroll.css);
-
+@import url(./style.animation.css);
 *{
     margin: 0;
     padding: 0;
@@ -332,49 +332,35 @@ a:hover {
   # Hero Section
   --------------------------------------------------------------*/
   #hero {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     background-size: cover;
     background-position: center bottom;
     position: relative;
-    margin-bottom: -200px;
+    margin-bottom: -280px;
+    overflow: hidden;
     z-index: 1;
   }
   
+#hero .fotos {
+  width: 500%;
+  animation-name: animacao;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+#hero .fotos img{
+  width: 19.9% ;
+}
+
   #hero:before {
     content: "";
-    background: rgba(60, 65, 51, 0.4);
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
   }
-  .slide{
-    height: 100%;
-    width: 100%;
-  }
-
-  .carousel-item{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .carousel-item:before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
 
   .imgSlide{
     width: 100vw;
@@ -382,43 +368,6 @@ a:hover {
     object-fit: cover;
     filter:brightness(.5);
   }
-
-  #hero .hero-container {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .carousel-caption h1 {
-    margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #fff;
-  }
-  .carousel-caption{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-direction: center;
-    top: 0;
-    transform: translateY(30%);
-    margin: 0;
-    padding: 0;
-  }
-  
-  .carousel-caption h2 {
-    color: #eee;
-    margin-bottom: 50px;
-    font-size: 24px;
-  }
-  
   #hero .btn-get-started {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -462,10 +411,6 @@ a:hover {
       line-height: 24px;
       margin-bottom: 30px;
     }
-  
-    #hero .hero-container {
-      padding: 0 15px;
-    }
   }
   
   @media (max-height: 500px) {
@@ -483,7 +428,7 @@ a:hover {
 --------------------------------------------------------------*/
 section {
     padding-bottom: 60px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .section-bg {
@@ -511,6 +456,7 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding-bottom: 15px;
   background: #fff;
+  border-radius: 5px 5px 0 0;
 }
 
 .about .count-box {
@@ -589,7 +535,11 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
-
+.informacoes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 .about .play-btn {
   width: 94px;
   height: 94px;
@@ -754,7 +704,9 @@ section {
 }
 .history .history-heading h4, .history .history-heading .h4 {
   margin-top: 0;
-  color: inherit;
+  opacity: 1;
+  color: #7ea436;
+  font-weight: 600;
 }
 .history .history-heading h4.subheading, .history .history-heading .subheading.h4 {
   text-transform: none;
@@ -763,7 +715,6 @@ section {
 .history .history-body > p {
   margin-bottom: 0;
 }
-
 @media (min-width: 768px) {
   .history:before {
     left: 50%;

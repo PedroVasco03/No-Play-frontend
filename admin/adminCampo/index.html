@@ -4,62 +4,361 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/sidebar.style.css">
-    <link rel="stylesheet" href="./styles/side.alteration.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap-icons-1.9.1/bootstrap-icons.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../../css/style.adminfo.css">
     <title>Inicio | ADcampo</title>
 </head>
 <body>
     <div class="containerGeral">
-        <div class="sidebar">
-            <div class="logo">
-                <div class="imgContainer">
-                  <img src="../../images/logos/logoSemFundoN.png" alt="">  
-                </div>
-                <!-- <h1 class="text-light"><a href="./index.html"><b>No<span class="logoSpan">Play</span></b></a></h1> -->
-            </div>
-            <div class="menu">
-                <div class="btnBox ative">
-                    <i class="bi bi-house"></i>
-                    <a href="./index.html">Inicio</a>
-                </div>
-                <div class="btnBox">
-                    <i class="bi bi-alarm"></i>
-                    <a href="./pages/disponibility.html">Regist & Dispo</a>
-                </div>
-                <div class="btnBox">
-                    <i class="bi bi-alarm"></i>
-                    <a href="./pages/marcation.html">Agendados</a>
-                </div>
-                <div class="btnBox">
-                    <i class="bi bi-person"></i>
-                    <a href="./pages/ADCaccount.html">Conta</a>
-                </div>
-            </div>
-            <div class="sair">
-                <div class="btnBox">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <a href="/">Sair</a>
-                </div>
-            </div>
-            <div class="barra"></div>
+
+        <div class="navbar">
+            <h1 class="text-light"><a href="index.html"><b>No<span class="logoSpan">Play</span></b></a></h1>
+            <i class="bi bi-person-fill"></i>
         </div>
-            <div class="container">
-            <div class="content">
-                <h1>Seja Bem vindo ao <b>No<span style="color: #5a8013;">Play</span></h1>
-                <p>Encontre os jogos de seu time, use nosso sistema com sabedoria e seja feliz.</p>
-                <div class="btnfield">
-                    <a href="#">Perguntas frequentes</a>
-                    <a href="#">Publicações recentes</a>
+            <nav class="main-menu">
+                <ul class="logo">
+                    <li class="lilo">
+                      <a href="/">
+                        <img src="../../images/logos/logoSemFundoN.png" alt="">
+                      </a>
+                    </li>
+                </ul>
+                
+                <ul class="item-side">
+                  <li >
+                    <a href="./index.html"class="on">
+                      <i class="bi bi-house-fill bi-2x"></i>
+                      <span class="nav-text">
+                        Página Inicial
+                      </span>
+                    </a>
+            
+                  </li>
+                  <li class="has-subnav">
+                    <a href="./pages/registerStadium.html">
+                      <i class="bi bi-bookmark-plus-fill bi-2x"></i>
+                      <span class="nav-text">
+                        Cadastro de Estadios
+                      </span>
+                    </a>
+                  </li>
+                  <li class="has-subnav">
+                    <a href="./pages/disponibility.html">
+                      <i class="bi bi-calendar-fill bi-2x"></i>
+                      <span class="nav-text">
+                        disponibilidade
+                      </span>
+                    </a>
+                  </li>
+                  <li class="has-subnav">
+                    <a href="./pages/marcation.html">
+                      <i class="bi bi-alarm-fill bi-2x"></i>
+                      <span class="nav-text">
+                        Jogos Agendados
+                      </span>
+                    </a>
+                  </li>
+                  <li class="has-subnav">
+                    <a href="./pages/ADCaccount.html">
+                      <i class="bi bi-person-fill bi-2x"></i>
+                      <span class="nav-text">
+                        Minha Conta
+                      </span>
+                    </a>
+            
+                  </li>
+                </ul>
+            
+                <ul class="logout">
+                  <li>
+                    <a href="/">
+                      <i class="bi bi-box-arrow-right fa-2x"></i>
+                      <span class="nav-text">
+                        Terminar sessão
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+       
+          <div class="container">
+            <div class="info-cards">
+              <div class="card" style="background-color: #f6a9234e">
+                <div class="icon" style="background-color: #f6a92382">
+                  <i class="bi bi-people-fill" style="color:#f6a723;"></i>
                 </div>
-            </div>
-            <div class="contentImg">
-                <div class="imageContainer">
-                    <img src="../../images/portatil.png" alt="">
-                    <video class="vid"  autoplay muted loop src="../../video/fundo.mp4"></video>
+                <div class="informations">
+                  <h3>Equipes Cadastradas</h3>
+                  <p>15</p>
                 </div>
+                <small style="color: #01a43d;">+20%</small>
+              </div>
+              <div class="card" style="background-color: #24d1634f">
+                <div class="icon" style="background-color: #24d1638a">
+                  <i class="bi bi-view-stacked" style="color:#24d164;"></i>
+                </div>
+      
+                <div class="informations">
+                  <h3>Estadios Disponiveis</h3>
+                  <p>04</p>
+                </div>
+                <small style="color: rgb(225, 0, 0);">-50%</small>
+              </div>
+              <div class="card" style="background-color: #ed4f9e50">
+                <div class="icon" style="background-color: #ed4f9e8f">
+                  <i class="bi bi-view-list" style="color:#ed4f9d;"></i>
+                </div>
+                <div class="informations">
+                  <h3>Estadios Cadastrados</h3>
+                  <p>08</p>
+                </div>
+                <small style="color: rgb(225, 0, 0);">-13%</small>
+              </div>
+              <div class="card" style="background-color: #2564eb50">
+                <div class="icon" style="background-color: #2564eb7b">
+                  <i class="bi bi-shield-plus" style="color:#2563eb;"></i>
+                </div>
+                <div class="informations">
+                  <h3>Vagas Disponiveis</h3>
+                  <p>15</p>
+                </div>
+                <small style="color: #01a43d;">+39%</small>
+              </div>
             </div>
-        </div>
+      
+            <div class="info-stadium">
+              <div class="content-info">
+                <div class="info">
+                  <i class="bi bi-journal-plus i"></i>
+                  <div class="text">
+                    <h3>Que tal aumentarmos os números?</h3>
+                    <p>Mais algum estadio disponivel? cadastre agora em nosso sistema.</p>
+                  </div>
+      
+                  <div class="btn">
+                    <a href="./pages/registerStadium.html">
+                      <i class="bi bi-arrow-right"></i>
+                      <p>Cadastrar agora </p>
+                    </a>
+                  </div>
+      
+                </div>
+              </div>
+              <div class="content-progress">
+                <div class="progress">
+                  <span class="title timer">48</span>
+                  <div class="overlay"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+                <div class="progress">
+                  <span class="title timer">70</span>
+                  <div class="overlay"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+      
+                <div class="progress">
+                  <span class="title timer">85</span>
+                  <div class="overlay"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container-table">
+              <h2>Estádios Cadastrados</h2>
+              <div class="table-scroll">
+                <table class="table" border="1" cellspacing="0" rules="none">
+                  <thead>
+                    <tr>
+                      <th>Foto</th>
+                      <th>ID</th>
+                      <th>Nome</th>
+                      <th>Capacidade</th>
+                      <th>Localização</th>
+                      <th>Preço</th>
+      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem1.jpg"
+                          alt="estadio0">
+                      </td>
+                      <td>
+                        0001237
+                      </td>
+                      <td>
+                        Sambila Stadium
+                      </td>
+                      <td>
+                        100
+                      </td>
+                      <td>
+                        Sambizanga
+                      </td>
+                      <td>
+                        0,00Kz
+                      </td>
+                    </tr>
+      
+                    <tr class="t2">
+                    <td >
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem31.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0009842
+                    </td>
+                    <td>
+                      Sequele Stadium
+                    </td>
+                    <td>
+                      50
+                    </td>
+                    <td>
+                      C. Sequele
+                    </td>
+                    <td>
+                      1.000,00Kz
+                    </td>
+                    </tr>
+      
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem5.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0008764
+                    </td>
+                    <td>
+                      Villa Stadium
+                    </td>
+                    <td>
+                      100
+                    </td>
+                    <td>
+                      Cacuaco Villa
+                    </td>
+                    <td>
+                      500,00Kz
+                    </td>
+                    </tr>
+      
+                    <tr class="t2">
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem26.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0007214
+                    </td>
+                    <td>
+                      Villa Stadium 2
+                    </td>
+                    <td>
+                      120
+                    </td>
+                    <td>
+                      Viana Villa
+                    </td>
+                    <td>
+                      1500,00Kz
+                    </td>
+                    </tr>
+      
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem42.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0007432
+                    </td>
+                    <td>
+                      Villa Stadium3
+                    </td>
+                    <td>
+                      20
+                    </td>
+                    <td>
+                      Villa, Gamek
+                    </td>
+                    <td>
+                      2.000,00Kz
+                    </td>
+                    </tr>
+      
+                    <tr class="t2">
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem46.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0007653
+                    </td>
+                    <td>
+                      GoC Stadium
+                    </td>
+                    <td>
+                      200
+                    </td>
+                    <td>
+                      Cazenga
+                    </td>
+                    <td>
+                      0,00Kz
+                    </td>
+                    </tr>
+      
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem13.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0008643
+                    </td>
+                    <td>
+                      Popula Stadium
+                    </td>
+                    <td>
+                      60
+                    </td>
+                    <td>
+                      Bairro Popular
+                    </td>
+                    <td>
+                      0,00Kz
+                    </td>
+                    </tr>
+      
+                    <tr class="t2">
+                    <td>
+                      <img width="100px" style="border-radius: 10px;" src="../../../images/estadios/imagem15.jpg"
+                        alt="estadio0">
+                    </td>
+                    <td>
+                      0004893
+                    </td>
+                    <td>
+                      Kilamba Stadium
+                    </td>
+                    <td>
+                      500
+                    </td>
+                    <td>
+                      C. Kilamba
+                    </td>
+                    <td>
+                      5.000,00Kz
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
     </div>
 </body>
 </html>
